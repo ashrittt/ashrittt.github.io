@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Specialization Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      overflow-x: hidden;
+      background-color: #f2e4cf;
+      color: #7687b2;
+    }
+      header {
+      background: linear-gradient(to right, #adb8f0, #99d8ff, #adb8f0);
+      color: #000357;
+      padding: 1em;
+      text-align: center;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+    nav ul li a {
+      color: #000357;
+      text-decoration: none;
+    }
+    main {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+    section {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 100%;
+      opacity: 0;
+      transition: all 0.6s ease-in-out;
+      padding: 2em;
+      box-sizing: border-box;
+    }
+    section.active {
+      left: 0;
+      opacity: 1;
+    }
+    section:nth-of-type(1) {
+      background-color: #f2e4cf;
+    }
+    section:nth-of-type(2) {
+      background-color: #eed3d3;
+    }
+    section:nth-of-type(3) {
+      background-color: #c5c7ee;
+    }
+    h2 {
+      color: #4880db;
+    }
+    ul {
+      color: #587960;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1em;
+      border: 1px solid #6D94C5;
+    }
+    th, td {
+      border: 1px solid #6D94C5;
+      padding: 0.5em;
+      text-align: left;
+    }
+    a {
+      color: #597d6e;
+    }
+    img {
+      max-width: 300px;
+      margin-top: 1em;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .nav-buttons {
+      text-align: center;
+      margin-top: 1em;
+    }
+    .nav-buttons button {
+      margin: 0 10px;
+      padding: 0.5em 1em;
+      font-size: 1em;
+      background-color: #959ece;
+      border: 1px solid #6D94C5;
+      color: #000357;
+      cursor: pointer;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    footer {
+      background-color: #8b97d3;
+      color: #000357;
+      text-align: center;
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Student Specialization Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="showSection(0)">About Me</a></li>
+        <li><a href="#" onclick="showSection(1)">Projects</a></li>
+        <li><a href="#" onclick="showSection(2)">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="active">
+      <h2>About Me</h2>
+      <p>Hello! I'm a Computer Science student specializing in Web Development. I love building interactive websites and learning new technologies.</p>
+      <img src="https://via.placeholder.com/300x200" alt="Student profile image" />
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <ul>
+        <li>Personal Portfolio Website</li>
+        <li>Weather App using JavaScript</li>
+        <li>Responsive Blog Template</li>
+      </ul>
+      <table>
+        <caption>Project Overview</caption>
+        <thead>
+          <tr>
+            <th>Project</th>
+            <th>Technology</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Portfolio Website</td>
+            <td>HTML, CSS</td>
+            <td>Completed</td>
+          </tr>
+          <tr>
+            <td>Weather App</td>
+            <td>JavaScript, API</td>
+            <td>In Progress</td>
+          </tr>
+          <tr>
+            <td>Blog Template</td>
+            <td>HTML, CSS, Flexbox</td>
+            <td>Completed</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>You can reach me via email at <a href="mailto:student@example.com">student@example.com</a>.</p>
+    </section>
+  </main>
+
+  <div class="nav-buttons">
+    <button onclick="prevSection()">← Previous</button>
+    <button onclick="nextSection()">Next →</button>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Student Portfolio. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll("main section");
+    let current = 0;
+
+    function showSection(index) {
+      sections.forEach((sec, i) => {
+        sec.classList.remove("active");
+        if (i === index) sec.classList.add("active");
+      });
+      current = index;
+    }
+
+    function nextSection() {
+      current = (current + 1) % sections.length;
+      showSection(current);
+    }
+
+    function prevSection() {
+      current = (current - 1 + sections.length) % sections.length;
+      showSection(current);
+    }
+  </script>
+
+</body>
+</html>
