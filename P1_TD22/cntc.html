@@ -6,12 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ashrittt's Portfolio</title>
   <style>
+    html,
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      overflow-x: hidden;
+      padding: 0;
+      font-family: Arial, sans-serif;
       background-color: #f2e4cf;
       color: #7687b2;
+      overflow-x: hidden;
     }
 
     header {
@@ -21,79 +23,34 @@
       text-align: center;
     }
 
-    nav ul {
-      list-style-type: none;
-      padding: 0;
+    nav {
+      text-align: center;
+      margin-top: 0.5em;
     }
 
-    nav ul li {
-      display: inline;
-      margin: 0 10px;
-    }
-
-    nav ul li a {
+    nav a {
       color: #000357;
       text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
     }
 
     main {
-      position: relative;
       width: 100%;
-      height: 100vh;
-      overflow: hidden;
-    }
-
-    section {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 100%;
-      opacity: 0;
-      transition: all 0.6s ease-in-out;
+      min-height: 100vh;
       padding: 2em;
       box-sizing: border-box;
     }
 
-    section.active {
-      left: 0;
-      opacity: 1;
-    }
-
-    section:nth-of-type(1) {
-      background-color: #f2e4cf;
-    }
-
-    section:nth-of-type(2) {
-      background-color: #eed3d3;
-
-
-    }
-
-    section:nth-of-type(3) {
-      background-color: #c5c7ee;
+    section {
+      margin-bottom: 2em;
+      padding: 1em;
+      border-radius: 10px;
     }
 
     h2 {
+      text-align: center;
       color: #4880db;
-    }
-
-    ul {
-      color: #587960;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1em;
-      border: 1px solid #6D94C5;
-    }
-
-    th,
-    td {
-      border: 1px solid #6D94C5;
-      padding: 0.5em;
-      text-align: left;
     }
 
     a {
@@ -102,35 +59,8 @@
 
     img {
       max-width: 300px;
-      margin-top: 1em;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    .nav-buttons {
-      text-align: center;
-      margin-top: 1em;
-    }
-
-    .nav-buttons button {
-      margin: 0 10px;
-      padding: 0.5em 1em;
-      font-size: 1em;
-      background-color: #959ece;
-      border: 1px solid #6D94C5;
-      color: #000357;
-      cursor: pointer;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: scale(0.95);
-      }
-
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
+      display: block;
+      margin: 10px auto;
     }
 
     footer {
@@ -145,34 +75,36 @@
 <body>
 
   <header>
-    <h1>Ashrittt's Portfolio</h1>
-    <nav style="text-align:center;">
+    <h1 style="font-family: 'Georgia', serif;"> Ashrittt's Portfolio</h1>
+    <nav>
       <a href="abtme.html">About Me</a>
-      <a href="portf.html">Portfolio</a>
+      <a href="portf.html">Resume</a>
       <a href="cntc.html">Contact</a>
     </nav>
   </header>
 
-  
-<section class="active">
-      <h2 style="text-align:center;">･ﾟ✧:･ CONTACT ME ✩ ₊˚</h2>
-      <img src="62534959628027017841.jpg" alt="Cinnamoroll"
-        style="padding-top: 10px; display: block; margin-left: auto; margin-right: auto;">
+  <main>
+    <section>
+      <h2>･ﾟ✧:･ CONTACT ME ✩ ₊˚</h2>
+      <img src="62534959628027017841.jpg" alt="Cinnamoroll">
     </section>
 
     <section>
-        <h3>Instagram</h3>
-        <p>Main: @ashrittt<br>Art: @lunaris12.55</p>
+      <h3>Instagram</h3>
+      <p>Main: @ashrittt<br>Art: @lunaris12.55</p>
 
-        <h3>Twitter</h3>
-        <p>Art: @lunar1255</p>
+      <h3>Twitter</h3>
+      <p>Art: @lunar1255</p>
 
-        <h3>Quezon City, Metro Manila | P: (+63) 9776761968 | janecarlacampos@gmail.com | </h3>
+      <h3>Contact Info</h3>
+      <p>Quezon City, Metro Manila<br>P: (+63) 9776761968<br>Email: janecarlacampos@gmail.com</p>
     </section>
+  </main>
 
-  
-  <footer>
-    <p>&copy; 2025 Student Portfolio. All rights reserved.</p>
-  </footer>
 </body>
+
+<footer>
+  <p>&copy; 2025 Ashrittt's Portfolio. All rights reserved.</p>
+</footer>
+
 </html>

@@ -6,18 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ashrittt's Portfolio</title>
   <style>
+    html,
     body {
-      font-family: Arial, sans-serif;
+      height: 100%;
       margin: 0;
-      overflow-x: hidden;
+      padding: 0;
+      font-family: Arial, sans-serif;
       background-color: #f2e4cf;
       color: #7687b2;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
     }
 
     header {
       background: linear-gradient(to right, #adb8f0, #99d8ff, #adb8f0);
       color: #000357;
       padding: 1em;
+      text-align: center;
+    }
+
+    nav {
       text-align: center;
     }
 
@@ -31,17 +40,20 @@
       margin: 0 10px;
     }
 
-    nav ul li a {
+    nav a {
       color: #000357;
       text-decoration: none;
+      margin: 0 10px;
     }
 
+
     main {
-      position: relative;
       width: 100%;
-      height: 100vh;
-      overflow: hidden;
+      min-height: 100vh;
+      padding: 2em;
+      box-sizing: border-box;
     }
+
 
     section {
       position: absolute;
@@ -60,21 +72,22 @@
       opacity: 1;
     }
 
+
     section:nth-of-type(1) {
       background-color: #f2e4cf;
     }
 
     section:nth-of-type(2) {
       background-color: #eed3d3;
-
-
     }
 
     section:nth-of-type(3) {
       background-color: #c5c7ee;
     }
 
+
     h2 {
+      text-align: center;
       color: #4880db;
     }
 
@@ -82,29 +95,27 @@
       color: #587960;
     }
 
+
     table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 1em;
       border: 1px solid #6D94C5;
+      text-align: left;
     }
 
     th,
     td {
       border: 1px solid #6D94C5;
-      padding: 0.5em;
-      text-align: left;
+      padding: 10px;
     }
 
-    a {
-      color: #597d6e;
+    caption {
+      font-weight: bold;
+      font-style: italic;
+      margin-bottom: 10px;
     }
 
-    img {
-      max-width: 300px;
-      margin-top: 1em;
-      animation: fadeIn 2s ease-in-out;
-    }
 
     .nav-buttons {
       text-align: center;
@@ -119,6 +130,12 @@
       border: 1px solid #6D94C5;
       color: #000357;
       cursor: pointer;
+    }
+
+    img {
+      max-width: 300px;
+      margin-top: 1em;
+      animation: fadeIn 2s ease-in-out;
     }
 
     @keyframes fadeIn {
@@ -145,89 +162,96 @@
 <body>
 
   <header>
-    <h1>Ashrittt's Portfolio</h1>
-    <nav style="text-align:center;">
+    <h1 style="font-family: 'Georgia', serif;"> Ashrittt's Portfolio</h1>
+    <nav>
       <a href="abtme.html">About Me</a>
-      <a href="portf.html">Portfolio</a>
+      <a href="portf.html">Resume</a>
       <a href="cntc.html">Contact</a>
     </nav>
   </header>
-<title>Portfolio</title>
-    <main>
-      <h2 style="text-align:center;">･ﾟ✧:･ PORTFOLIO ✩ ₊˚</h2>
-      <table style="width: 100%; text-align: left; border: 1px;">
-        <caption><strong><i>RESUME</i></strong></caption>
-        <thead>
-          <tr>
-            <th>EDUCATION</th>
-          </tr>
-        </thead>
-        <body>
-          <tr>
-            <td>
-              <p>
-                FEU INSTITUTE OF TECHNOLOGY – Sampaloc, Manila<br>
-                Bachelor of Multimedia Arts — Expected May 2028<br>
-                Major in Animation and Digital Film<br>
-                Relevant Coursework: Digital Drawing; Visual Communications; Illustration and Cartooning;
-                Scriptwriting<br><br>
-                Senior High School<br>
-                SAINT PAUL UNIVERSITY QUEZON CITY – Gilmore, Quezon City<br>
-                Arts and Designs Track | Graduated: 2024<br>
-                Memberships: BED Student Council; TeaPaul Student Publications
-              </p>
-            </td>
-          </tr>
-          <tr>
-            <th>EXPERIENCE</th>
-          </tr>
-          <tr>
-            <td>
-              <p>
-                <strong> EVENTS HOST | Freelance/Student Organized-Based</strong><br>
-                <br> -> Hosted academic seminars and various Student Organized-Based events in the FEU Tech
-                community.<br>
-                NSTP TAMTalks — November 2024<br>
-                ACM: REVIVAL X – January 2025<br>
-                FS/SL Night Gamemaster – February 2025<br>
-                TAMAWatch: TBTV General Assembly – May 2025<br>
-                ASTIXplore – June 2025<br>
-                TEAMS: Tribo Matters: Art Remedy (Podcast) – July 2025<br>
-                Art Appreciation (Lights, Glitter Action Variety Show) – July 2025<br>
-                Freshies Got Talent: Halftime Showdown – September 2025<br>
-                <br> -> Hosted or appeared on-screen for various news or flash updates through TambayanTV, the official
-                multimedia broadcasting organization of FEU Tech. – 2024 to present<br>
-                <br> -> Engaged audiences of 50 to 200 people with energy and professionalism<br>
-                <br> -> Managed Host Scriptwriting, Event Programs, and Coordinated with Organizers for adapted and
-                smooth flow of the program or event.
-              </p>
-            </td>
-          </tr>
-          <tr>
-            <th>ACTIVITIES & ORGANIZATIONS</th>
-          </tr>
-          <tr>
-            <td>
-              <p style="padding-bottom: 10px;">
-                Youth of Iglesia Filipina Independienter – Member (2022 to present)<br>
-                --- Actively participated in various core church activities, including youth representation
-                through singing and dancing, as well as assisting in hosting small meetings.<br><br>
-                SPUQC Organizations<br>
-                BED STUDENT COUNCIL – 2022 to 2023<br>
-                --- Arts and Design Representative; led major events like SportsFest 2023 and Panibagong
-                Paskong Paulino 2022.<br>
-                TEAPAUL Student Publication – 2023 to 2024<br>
-                --- Photojournalist; contributed to visual content for school events and news articles.<br>
-                FEU Tech Freshmen Society — Vice President (2024-2025)<br>
-                --- Organized live programs and interactive events for freshmen.<br>
-                FEU Tech TambayanTV - Hosting Committee (2024-2025)<br>
-                --- On-screen host for news broadcasts, flash updates, and multimedia vlogs.<br>
-                --- BaliTambayan<br>
-                --- Flash updates<br>
-                --- Kamusta Katambay Vlogs<br>
-              </p>
-            </td>
-          </tr>
-        </body>
-      </table>
-    </main>
+
+  <main>
+    <h2>･ﾟ✧:･ RESUME ✩ ₊˚</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>EDUCATION</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <p>
+              FEU INSTITUTE OF TECHNOLOGY – Sampaloc, Manila<br>
+              Bachelor of Multimedia Arts — Expected May 2028<br>
+              Major in Animation and Digital Film<br>
+              Relevant Coursework: Digital Drawing; Visual Communications; Illustration and Cartooning;
+              Scriptwriting<br><br>
+              Senior High School<br>
+              SAINT PAUL UNIVERSITY QUEZON CITY – Gilmore, Quezon City<br>
+              Arts and Designs Track | Graduated: 2024<br>
+              Memberships: BED Student Council; TeaPaul Student Publications
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <th>EXPERIENCE</th>
+        </tr>
+        <tr>
+          <td>
+            <p>
+              <strong>EVENTS HOST | Freelance/Student Organized-Based</strong><br><br>
+              → Hosted academic seminars and various Student Organized-Based events in the FEU Tech community.<br>
+              NSTP TAMTalks — November 2024<br>
+              ACM: REVIVAL X – January 2025<br>
+              FS/SL Night Gamemaster – February 2025<br>
+              TAMAWatch: TBTV General Assembly – May 2025<br>
+              ASTIXplore – June 2025<br>
+              TEAMS: Tribo Matters: Art Remedy (Podcast) – July 2025<br>
+              Art Appreciation (Lights, Glitter Action Variety Show) – July 2025<br>
+              Freshies Got Talent: Halftime Showdown – September 2025<br><br>
+              → Hosted or appeared on-screen for various news or flash updates through TambayanTV, the official
+              multimedia broadcasting organization of FEU Tech. – 2024 to present<br><br>
+              → Engaged audiences of 50 to 200 people with energy and professionalism<br><br>
+              → Managed Host Scriptwriting, Event Programs, and Coordinated with Organizers for adapted and smooth flow
+              of the program or event.
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <th>ACTIVITIES & ORGANIZATIONS</th>
+        </tr>
+        <tr>
+          <td>
+            <p>
+              Youth of Iglesia Filipina Independienter – Member (2022 to present)<br>
+              — Actively participated in various core church activities, including youth representation through singing
+              and dancing, as well as assisting in hosting small meetings.<br><br>
+              SPUQC Organizations<br>
+              BED STUDENT COUNCIL – 2022 to 2023<br>
+              — Arts and Design Representative; led major events like SportsFest 2023 and Panibagong Paskong Paulino
+              2022.<br>
+              TEAPAUL Student Publication – 2023 to 2024<br>
+              — Photojournalist; contributed to visual content for school events and news articles.<br>
+              FEU Tech Freshmen Society — Vice President (2024–2025)<br>
+              — Organized live programs and interactive events for freshmen.<br>
+              FEU Tech TambayanTV – Hosting Committee (2024–2025)<br>
+              — On-screen host for news broadcasts, flash updates, and multimedia vlogs.<br>
+              — BaliTambayan<br>
+              — Flash updates<br>
+              — Kamusta Katambay Vlogs
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+</body>
+
+<footer>
+  <p>&copy; 2025 Ashrittt's Portfolio. All rights reserved.</p>
+</footer>
+
+
+</main>
