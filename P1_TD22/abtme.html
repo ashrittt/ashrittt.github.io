@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ashrittt's Portfolio</title>
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
+      overflow-y: scroll;
       overflow-x: hidden;
       background-color: #f2e4cf;
       color: #7687b2;
@@ -38,45 +42,14 @@
     }
 
     main {
-      position: relative;
       width: 100%;
-      height: 100vh;
-      overflow: hidden;
-    }
-
-    section {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 100%;
-      opacity: 0;
-      transition: all 0.6s ease-in-out;
       padding: 2em;
       box-sizing: border-box;
     }
 
-    section.active {
-      left: 0;
-      opacity: 1;
-    }
-
-    section:nth-of-type(1) {
-      background-color: #f2e4cf;
-    }
-
-    section:nth-of-type(2) {
-      background-color: #eed3d3;
-
-
-    }
-
-    section:nth-of-type(3) {
-      background-color: #c5c7ee;
-    }
-
     h2 {
       color: #4880db;
+      text-align: center;
     }
 
     ul {
@@ -90,8 +63,7 @@
       border: 1px solid #6D94C5;
     }
 
-    th,
-    td {
+    th, td {
       border: 1px solid #6D94C5;
       padding: 0.5em;
       text-align: left;
@@ -104,18 +76,32 @@
     img {
       max-width: 300px;
       margin-top: 1em;
+      border-radius: 8px;
     }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: scale(0.95);
-      }
+    .artwork-section {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
 
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
+    .art-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .art-column h3 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .art-column img {
+      max-width: 250px;
+      margin-bottom: 15px;
+      border-radius: 8px;
     }
 
     footer {
@@ -129,7 +115,7 @@
 
 <body>
   <header>
-    <h1 style="font-family: 'Georgia', serif;"> Ashrittt's Portfolio</h1>
+    <h1 style="font-family: 'Georgia', serif;">Ashrittt's Portfolio</h1>
     <nav style="text-align:center;">
       <a href="abtme.html">About Me</a>
       <a href="portf.html">Resume</a>
@@ -138,31 +124,37 @@
   </header>
 
   <main>
-    <h2 style="text-align:center;">･ﾟ✧:･ ABOUT ME ✩ ₊˚</h2>
-
+    <h2>･ﾟ✧:･ ABOUT ME ✩ ₊˚</h2>
     <div style="display: flex; justify-content: center; align-items: flex-start; margin-top: 20px;">
-
       <img src="6253495962802701786.jpg" alt="Cinnamoroll" style="width: 150px; border-radius: 8px;">
-
       <div style="text-align: left; margin-left: 20px;">
-        <p>I am Trisha Jane Carla L. Campos, 19 years old, living in Quezon City. Currently a 2nd year student of
-          FEU-TECH, Bachelor of Multimedia Arts,
-          <br>with a specialization in Traditional and Digital Arts, Media, and Animation. I am also great at hosting at
-          different events of my university.
-          <br> I am the Director of Programs of the student organization, Junior Philippine Computer Society (JPCS), and
-          a host of a certain organization,
+        <p>
+          I am Trisha Jane Carla L. Campos, 19 years old, living in Quezon City. Currently a 2nd year student of FEU-TECH, Bachelor of Multimedia Arts,
+          <br>with a specialization in Traditional and Digital Arts, Media, and Animation. I am also great at hosting at different events of my university.
+          <br>I am the Director of Programs of the student organization, Junior Philippine Computer Society (JPCS), and a host of a certain organization,
           <br>named PRISM, the official "mother-org" of Multimedia Arts Community.
         </p>
       </div>
     </div>
 
-    <div style="display: flex; justify-content: center; align-items: flex-start; margin-top: 20px;">
-      <h3> ･ﾟ✧:･ SAMPLE ARTWORKS ･ﾟ✧:･ </h3>
+    <h2>･ﾟ✧:･ SAMPLE ARTWORKS ･ﾟ✧:･</h2>
+    <div class="artwork-section">
+      <div class="art-column">
+        <h3>Digital Art</h3>
+        <img src="53115908.jpg" alt="Art1">
+        <img src="45ea7c2a-fbed-4410-a67e-e5670328c50b.jfif" alt="Art2">
+        <img src="7eac903f-1357-4661-8570-fbf4b632a18d.jfif" alt="Art3">
+      </div>
+      <div class="art-column">
+        <h3>Photography</h3>
+        <img src="ee4b6456-063e-48b1-abbb-38051080c42e.jfif" alt="Art4">
+        <img src="f48f928e-6bbf-4d25-9d6f-70af39985c7b.jfif" alt="Art5">
+      </div>
     </div>
+  </main>
 
-    <footer>
-      <p>&copy; Ashrittt's Portfolio. All rights reserved.</p>
-    </footer>
-
-
+  <footer>
+    <p>&copy; Ashrittt's Portfolio. All rights reserved.</p>
+  </footer>
+</body>
 </html>
