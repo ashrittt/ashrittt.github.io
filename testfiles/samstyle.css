@@ -1,0 +1,58 @@
+/* General Reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Header Styling */
+header {
+  background-color: #a2d2ff;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+/* Main Content */
+main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Text Styling */
+.intro {
+  font-family: 'Comic Sans MS', cursive;
+  color: #ffafcc;
+}
+
+.info {
+  font-family: Georgia, serif;
+  color: #333;
+}
+
+/* List Styling */
+.custom-list {
+  list-style-type: square;
+  padding-left: 20px;
+  margin-top: 10px;
+  color: #555;
+}
+
+/* Image Styling */
+.styled-image {
+  border: 3px solid #bde0fe;
+  margin: 20px 0;
+  width: 300px;
+  display: block;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #cdb4db;
+  text-align: center;
+  font-size: 0.8em;
+  padding: 10px;
+  color: #fff;
+}
