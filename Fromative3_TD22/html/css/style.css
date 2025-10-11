@@ -55,6 +55,7 @@ footer {
     align-items: center;
     display: block;
     font-size: 1.3rem;
+    font-family: 'Georgia', serif;
     padding: 12px 20px;
     background-color: #6A8FE6;
     color: #E6A6AF;
@@ -94,4 +95,14 @@ footer {
     box-shadow: 0 4px 12px rgba(240, 160, 160, 0.1);
     text-align: left;
     line-height: 1.6;
+}
+
+.vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 1rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #9c9fff;
+    padding: 20px;
+    line-height: 1;
 }
