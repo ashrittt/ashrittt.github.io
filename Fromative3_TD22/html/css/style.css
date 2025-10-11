@@ -71,3 +71,12 @@ footer {
 .vertical-nav a:hover {
     background-color: #2E3A59;
 }
+
+.sub-nav a {
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: inline-block;
+    margin: 5px;
+}
+
