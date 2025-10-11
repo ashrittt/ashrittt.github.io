@@ -106,3 +106,27 @@ footer {
     padding: 20px;
     line-height: 1;
 }
+
+.identity-card {
+  background-color: #f8cce2; /* soft pink */
+  padding: 20px 30px;
+  border-radius: 12px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  color: #3a003a;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: auto;
+}
+
+.identity-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.identity-card p {
+  font-size: 1.2rem;
+  margin: 0;
+  letter-spacing: 1px;
+}
