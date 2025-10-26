@@ -9,43 +9,74 @@
       font-family: 'Comic Sans MS', cursive;
       background: #ffe6f0;
       text-align: center;
-      padding: 50px;
+      padding: 40px 20px;
+      margin: 0;
     }
+
     h1 {
-      font-size: 2.5em;
+      font-size: 2em;
       color: #d6336c;
+      margin-bottom: 20px;
     }
+
     .question {
-      margin: 30px 0;
-      font-size: 1.5em;
+      font-size: 1.3em;
+      margin-bottom: 30px;
     }
+
     .buttons {
-      margin: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
     }
+
     button {
-      font-size: 1.2em;
-      padding: 10px 20px;
-      margin: 10px;
-      cursor: pointer;
+      font-size: 1.1em;
+      padding: 12px 24px;
       border: none;
-      border-radius: 8px;
-      background-color: #ffe3e3;
+      border-radius: 10px;
+      background-color: #fff;
       color: #d6336c;
-      transition: transform 0.2s;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      z-index: 1;
     }
+
     button:hover {
       transform: scale(1.1);
     }
-    #response {
+
+    #yesBtn.grow {
+      transform: scale(5);
+      transition: transform 0.5s ease;
+      z-index: 10;
+      position: relative;
+    }
+
+    #response, #twist {
       margin-top: 40px;
-      font-size: 1.5em;
+      font-size: 1.2em;
       color: #6f42c1;
     }
+
     #twist {
       display: none;
-      margin-top: 30px;
-      font-size: 1.3em;
-      color: #495057;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.6em;
+      }
+
+      .question {
+        font-size: 1.1em;
+      }
+
+      button {
+        font-size: 1em;
+        padding: 10px 20px;
+      }
     }
   </style>
 </head>
@@ -53,7 +84,7 @@
   <h1>💌 Ask Me a Valentine</h1>
   <div class="question">Would you be my Valentine?</div>
   <div class="buttons">
-    <button onclick="respondYes()">Yes 💖</button>
+    <button id="yesBtn" onclick="respondYes()">Yes 💖</button>
     <button onclick="respondNo()">No 😢</button>
   </div>
   <div id="response"></div>
@@ -61,6 +92,8 @@
 
   <script>
     function respondYes() {
+      const btn = document.getElementById("yesBtn");
+      btn.classList.add("grow");
       document.getElementById("response").innerHTML = "Aww that's sweet!";
       setTimeout(() => {
         document.getElementById("twist").style.display = "block";
