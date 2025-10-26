@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Study Hub</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>📚 Final Review Hub</h1>
+    <p>Access your lecture modules and stay focused with the Pomodoro timer.</p>
+  </header>
+
+  <section id="modules">
+    <h2>📝 Lecture Modules</h2>
+    <ul>
+      <li><a href="modules/module1.pdf" target="_blank">Module 1: Introduction</a></li>
+      <li><a href="modules/module2.pdf" target="_blank">Module 2: Advanced Topics</a></li>
+      <!-- Add more modules as needed -->
+    </ul>
+  </section>
+
+  <section id="pomodoro">
+    <h2>⏱️ Pomodoro Timer</h2>
+    <div id="timer">
+      <span id="minutes">25</span>:<span id="seconds">00</span>
+    </div>
+    <div class="buttons">
+      <button onclick="startTimer()">Start</button>
+      <button onclick="pauseTimer()">Pause</button>
+      <button onclick="resetTimer()">Reset</button>
+    </div>
+  </section>
+
+  <script src="timer.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+#modules ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#modules li {
+  margin: 10px 0;
+}
+
+#timer {
+  font-size: 3em;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.buttons {
+  text-align: center;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 1em;
+}
