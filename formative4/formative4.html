@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Form</title>
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Link to external JavaScript -->
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Sign Up Portal</h1>
+    </header>
+
+    <div class="container">
+        <div class="mid-section">
+            <div class="column">
+                <form id="signupForm" class="identity-card">
+                    <h2>Sign Up Form</h2>
+
+                    <label for="idNumber">ID Number:</label>
+                    <input type="text" id="idNumber" required />
+
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" required />
+
+                    <label for="middleName">Middle Name:</label>
+                    <input type="text" id="middleName" />
+
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" required />
+
+                    <label for="gender">Gender:</label>
+                    <select id="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                    <label for="birthday">Birthday:</label>
+                    <input type="date" id="birthday" required />
+
+                    <button type="submit" id="saveBtn">Save</button>
+            </div>
+
+            <div class="column">
+                <table id="dataTable">
+                    <thead>
+                        <tr>
+                            <th>ID Number</th>
+                            <th>First Name</th>
+                            <th>Middle Name</th>
+                            <th>Last Name</th>
+                            <th>Gender</th>
+                            <th>Birthday</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Sign Up Portal</p>
+    </footer>
+</body>
+
+</html>
