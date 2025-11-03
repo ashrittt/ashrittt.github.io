@@ -4,18 +4,116 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign Up Form</title>
+    <title>Register Here</title>
 
-    <!-- Link to external CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            background: linear-gradient(to right, #fff4dc, #fac4d6, #c4cfff);
+            padding: 20px;
+            color: #333;
+        }
 
-    <!-- Link to external JavaScript -->
+        h1,
+        h2 {
+            text-align: center;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .mid-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .column {
+            flex: 1 1 300px;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+        }
+
+        input,
+        select {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: #f4ffb4;
+            color: rgb(139, 115, 115);
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e3ff96;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th {
+            background-color: #b78bca;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        footer p {
+            text-align: center;
+        }
+    </style>
+
     <script defer src="script.js"></script>
 </head>
 
 <body>
     <header>
-        <h1>Sign Up Portal</h1>
+        <h1 style="font-family: Georgia, 'Times New Roman', Times, serif;">Registration</h1>
     </header>
 
     <div class="container">
@@ -25,28 +123,29 @@
                     <h2>Sign Up Form</h2>
 
                     <label for="idNumber">ID Number:</label>
-                    <input type="text" id="idNumber" required />
+                    <input type="text" id="idNumber" name="idNumber" required />
 
                     <label for="firstName">First Name:</label>
-                    <input type="text" id="firstName" required />
+                    <input type="text" id="firstName" name="firstName" required />
 
                     <label for="middleName">Middle Name:</label>
-                    <input type="text" id="middleName" />
+                    <input type="text" id="middleName" name="middleName" />
 
                     <label for="lastName">Last Name:</label>
-                    <input type="text" id="lastName" required />
+                    <input type="text" id="lastName" name="lastName" required />
 
                     <label for="gender">Gender:</label>
-                    <select id="gender">
+                    <select id="gender" name="gender">
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                         <option value="Other">Other</option>
                     </select>
 
                     <label for="birthday">Birthday:</label>
-                    <input type="date" id="birthday" required />
+                    <input type="date" id="birthday" name="birthday" required />
 
                     <button type="submit" id="saveBtn">Save</button>
+                </form>
             </div>
 
             <div class="column">
@@ -68,7 +167,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2025 Sign Up Portal</p>
+        <p>&copy; 2025 BBEEEBB</p>
     </footer>
 </body>
 

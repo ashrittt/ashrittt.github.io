@@ -1,7 +1,7 @@
-// Array to store user data
-const userData = [];
 
-// Function to add user data to the table
+const userData = []; 
+
+
 function addUserToTable(user) {
     const tableBody = document.querySelector("#dataTable tbody");
     const row = document.createElement("tr");
@@ -12,9 +12,9 @@ function addUserToTable(user) {
         row.appendChild(cell);
     });
 
-    // Add hover effect to change row color
+
     row.addEventListener("mouseover", () => {
-        row.style.backgroundColor = "#e0ffff";
+        row.style.backgroundColor = "#d1fefeff";
     });
     row.addEventListener("mouseout", () => {
         row.style.backgroundColor = "";
@@ -24,7 +24,7 @@ function addUserToTable(user) {
 }
 
 document.getElementById("signupForm").addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent page reload
+    event.preventDefault(); 
 
     const user = {
         idNumber: document.getElementById("idNumber").value,
@@ -37,5 +37,5 @@ document.getElementById("signupForm").addEventListener("submit", function (event
 
     userData.push(user);
     addUserToTable(user);
-    this.reset(); // Clear form
+    this.reset();
 });
