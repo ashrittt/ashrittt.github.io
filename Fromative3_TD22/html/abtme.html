@@ -37,7 +37,7 @@
                     style="width: 120px; border-radius: 1px;">
             </section>
 
-            <div id="password-lock" style="text-align: center; margin-top: 50px;">
+            <div id="password-lock" class="password-box">
                 <h2>Enter Password to View About Me</h2>
                 <input type="password" id="password-input" placeholder="Enter password" />
                 <button onclick="unlockSection()">Unlock</button>
@@ -101,7 +101,7 @@
 <script>
     function unlockSection() {
         const password = document.getElementById("password-input").value;
-        const correctPassword = "ashritttluna";
+        const correctPassword = "ashritt123";
 
         if (password === correctPassword) {
             document.getElementById("about-section").style.display = "block";
