@@ -108,25 +108,83 @@ footer {
 }
 
 .identity-card {
-  background-color: #f8cce2; /* soft pink */
-  padding: 20px 30px;
-  border-radius: 12px;
-  text-align: center;
-  font-family: 'Arial', sans-serif;
-  color: #3a003a;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
-  margin: auto;
+    background-color: #f8cce2;
+    /* soft pink */
+    padding: 20px 30px;
+    border-radius: 12px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #3a003a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: auto;
 }
 
 .identity-card h2 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-  font-weight: bold;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .identity-card p {
-  font-size: 1.2rem;
-  margin: 0;
-  letter-spacing: 1px;
+    font-size: 1.2rem;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .vertical-nav {
+        gap: 20px;
+    }
+
+    .vertical-nav a {
+        font-size: 1rem;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    .mid-section {
+        grid-template-columns: 1fr;
+        padding: 20px 10px;
+        gap: 20px;
+    }
+
+    .column {
+        padding: 15px;
+    }
+
+    .identity-card {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .vertical-text {
+        writing-mode: horizontal-tb;
+        text-align: center;
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    header h1,
+    header h3 {
+        font-size: 1.5rem;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
 }
