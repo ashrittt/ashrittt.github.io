@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Basic page layout</title>
+    <title>Ashritt's Corner</title>
 
 </head>
 
@@ -36,7 +36,15 @@
                 <img src="pictures/62534959628027017841.jpg" alt="Cinnamoroll"
                     style="width: 120px; border-radius: 1px;">
             </section>
-            <section class="mid">
+
+            <div id="password-lock" style="text-align: center; margin-top: 50px;">
+                <h2>Enter Password to View About Me</h2>
+                <input type="password" id="password-input" placeholder="Enter password" />
+                <button onclick="unlockSection()">Unlock</button>
+                <p id="error-message" style="color: red;"></p>
+            </div>
+
+            <section class="mid" id="about-section" style="display: none;">
                 <div class="banner">
                     <img src="pictures/Untitled design.png" alt="Clouds">
                 </div>
@@ -55,13 +63,13 @@
                                 <br>Specialization:</strong> Traditional and Digital Arts, Media, and Animation.
                             <br><strong>Great in:</strong> Hosting, Drawing, Painting, Writing, and Designing.
                             <br><br><strong>Director of Programs | Junior Philippine Computer Society (JPCS)
-                                <br>Hosting Committe | PRISM, the official "mother-org" of Multimedia Arts Community.
+                                <br>Hosting Committee | PRISM, the official "mother-org" of Multimedia Arts Community.
                                 <BR></strong>
                             <br> My experience in writing takes back to when I was still a child. Along with Art, I have
                             another hobby, and it's reading tons of novels, and writing them in my own style. I have
                             tried once
-                            become a writer in Wattpad,
-                            <br> and a writer in Facebook during pandemic, yet I stopped due to my busy schedule and
+                            become a writer in Wattpad, and a writer in Facebook during pandemic, yet I stopped due to
+                            my busy schedule and
                             interest. But, even so I'm not writing long stories, I kept writing poems, love letters for
                             crushes,
                             as they served as my journal, where my feelings are aligned with short stanza and verses,
@@ -90,5 +98,18 @@
         </footer>
     </div>
 </body>
+<script>
+    function unlockSection() {
+        const password = document.getElementById("password-input").value;
+        const correctPassword = "ashritttluna"; 
+
+        if (password === correctPassword) {
+            document.getElementById("about-section").style.display = "block";
+            document.getElementById("password-lock").style.display = "none";
+        } else {
+            document.getElementById("error-message").textContent = "Incorrect password. Try again.";
+        }
+    }
+</script>
 
 </html>

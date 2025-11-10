@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    background-color: #6A8FE6;
+    background-color: #6191ff;
     color: white;
     text-align: center;
 }
@@ -130,61 +130,4 @@ footer {
     font-size: 1.2rem;
     margin: 0;
     letter-spacing: 1px;
-}
-
-@media (max-width: 768px) {
-    body {
-        padding: 10px;
-    }
-
-    .container {
-        padding: 10px;
-    }
-
-    .left,
-    .right {
-        width: 100%;
-        padding: 10px;
-    }
-
-    .vertical-nav {
-        gap: 20px;
-    }
-
-    .vertical-nav a {
-        font-size: 1rem;
-        padding: 10px;
-        margin-bottom: 20px;
-    }
-
-    .mid-section {
-        grid-template-columns: 1fr;
-        padding: 20px 10px;
-        gap: 20px;
-    }
-
-    .column {
-        padding: 15px;
-    }
-
-    .identity-card {
-        max-width: 100%;
-        padding: 15px;
-    }
-
-    .vertical-text {
-        writing-mode: horizontal-tb;
-        text-align: center;
-        font-size: 0.9rem;
-        padding: 10px;
-    }
-
-    header h1,
-    header h3 {
-        font-size: 1.5rem;
-    }
-
-    footer p {
-        font-size: 0.9rem;
-    }
 }
