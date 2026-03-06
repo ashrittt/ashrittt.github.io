@@ -1,86 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Present 🎁</title>
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-      font-family: 'Arial', sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SURPRISE 🎁</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            font-family: 'Arial', sans-serif;
+        }
 
-    .present {
-      width: 120px;
-      height: 120px;
-      background: #ff6f91;
-      position: relative;
-      border-radius: 10px;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: transform 0.2s ease;
-    }
+        .present {
+            width: 120px;
+            height: 120px;
+            background: #ff6f91;
+            position: relative;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease;
+        }
 
-    /* Ribbons */
-    .present::before, .present::after {
-      content: "";
-      position: absolute;
-      background: #fff;
-    }
-    .present::before {
-      width: 20px;
-      height: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    .present::after {
-      height: 20px;
-      width: 100%;
-      top: 50%;
-      transform: translateY(-50%);
-    }
+        /* Ribbons */
+        .present::before,
+        .present::after {
+            content: "";
+            position: absolute;
+            background: #fff;
+        }
 
-    /* Bow */
-    .bow {
-      position: absolute;
-      top: -25px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 2em;
-    }
+        .present::before {
+            width: 20px;
+            height: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
 
-    /* Shake animation */
-    @keyframes shake {
-      0% { transform: rotate(0deg); }
-      25% { transform: rotate(5deg); }
-      50% { transform: rotate(-5deg); }
-      75% { transform: rotate(5deg); }
-      100% { transform: rotate(0deg); }
-    }
+        .present::after {
+            height: 20px;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
 
-    .shake {
-      animation: shake 0.6s ease;
-    }
-  </style>
+        /* Bow */
+        .bow {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2em;
+        }
+
+        /* Shake animation */
+        @keyframes shake {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(5deg);
+            }
+
+            50% {
+                transform: rotate(-5deg);
+            }
+
+            75% {
+                transform: rotate(5deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        .shake {
+            animation: shake 0.6s ease;
+        }
+    </style>
 </head>
-<body>
-  <div class="present" onclick="openPresent()">
-    <div class="bow">🎀</div>
-  </div>
 
-  <script>
-    function openPresent() {
-      const box = document.querySelector('.present');
-      box.classList.add('shake');
-      setTimeout(() => {
-        window.location.href = 'surprise.html';
-      }, 800); // delay for shake effect
-    }
-  </script>
+<body>
+    <div class="present" onclick="openPresent()">
+        <div class="bow">🎀</div>
+    </div>
+
+    <script>
+        function openPresent() {
+            const box = document.querySelector('.present');
+            box.classList.add('shake');
+            setTimeout(() => {
+                window.location.href = 'surprise.html';
+            }, 800); // delay for shake effect
+        }
+    </script>
+    <div class="container">
+        <h1>Click to open your surprise 💌</h1>
+        <button onclick="location.href='surprise.html'">Open</button>
+    </div>
 </body>
+
 </html>
