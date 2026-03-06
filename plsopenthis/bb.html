@@ -21,49 +21,52 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      gap: 15px; /* adds consistent spacing between items */
+      gap: 15px;
     }
 
     .present {
-      width: 120px;
-      height: 120px;
+      width: 150px;
+      height: 150px;
       background: #ff6f91;
       position: relative;
-      border-radius: 10px;
+      border-radius: 12px;
       cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      transition: transform 0.2s ease;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
     }
 
-    /* Ribbons */
-    .present::before,
-    .present::after {
+    /* Vertical ribbon */
+    .present::before {
       content: "";
       position: absolute;
-      background: #fff;
-    }
-
-    .present::before {
       width: 20px;
       height: 100%;
       left: 50%;
+      top: 0;
       transform: translateX(-50%);
+      background: #fff;
+      border-radius: 5px;
     }
 
+    /* Horizontal ribbon */
     .present::after {
+      content: "";
+      position: absolute;
       height: 20px;
       width: 100%;
       top: 50%;
+      left: 0;
       transform: translateY(-50%);
+      background: #fff;
+      border-radius: 5px;
     }
 
     /* Bow */
     .bow {
       position: absolute;
-      top: -25px;
+      top: -35px;
       left: 50%;
       transform: translateX(-50%);
-      font-size: 2em;
+      font-size: 2.5em;
     }
 
     /* Caption text */
