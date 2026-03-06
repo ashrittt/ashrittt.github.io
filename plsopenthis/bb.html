@@ -2,125 +2,108 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Present 🎁</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-            font-family: 'Arial', sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Present 🎁</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: 'Arial', sans-serif;
+    }
 
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
 
-        .present {
-            width: 120px;
-            height: 120px;
-            background: #ff6f91;
-            position: relative;
-            border-radius: 10px;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.2s ease;
-        }
+    .present {
+      width: 120px;
+      height: 120px;
+      background: #ff6f91;
+      position: relative;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease;
+    }
 
-        /* Ribbons */
-        .present::before,
-        .present::after {
-            content: "";
-            position: absolute;
-            background: #fff;
-        }
+    /* Ribbons */
+    .present::before,
+    .present::after {
+      content: "";
+      position: absolute;
+      background: #fff;
+    }
 
-        .present::before {
-            width: 20px;
-            height: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-        }
+    .present::before {
+      width: 20px;
+      height: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
 
-        .present::after {
-            height: 20px;
-            width: 100%;
-            top: 50%;
-            transform: translateY(-50%);
-        }
+    .present::after {
+      height: 20px;
+      width: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
 
-        /* Bow */
-        .bow {
-            position: absolute;
-            top: -25px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 2em;
-        }
+    /* Bow */
+    .bow {
+      position: absolute;
+      top: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2em;
+    }
 
-        /* Caption text */
-        .caption {
-            margin-top: 15px;
-            font-size: 1.2em;
-            color: #333;
-        }
+    /* Caption text */
+    .caption {
+      margin-top: 15px;
+      font-size: 1.2em;
+      color: #333;
+    }
 
-        /* Shake animation */
-        @keyframes shake {
-            0% {
-                transform: rotate(0deg);
-            }
+    /* Shake animation */
+    @keyframes shake {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(5deg); }
+      50% { transform: rotate(-5deg); }
+      75% { transform: rotate(5deg); }
+      100% { transform: rotate(0deg); }
+    }
 
-            25% {
-                transform: rotate(5deg);
-            }
-
-            50% {
-                transform: rotate(-5deg);
-            }
-
-            75% {
-                transform: rotate(5deg);
-            }
-
-            100% {
-                transform: rotate(0deg);
-            }
-        }
-
-        .shake {
-            animation: shake 0.6s ease;
-        }
-    </style>
+    .shake {
+      animation: shake 0.6s ease;
+    }
+  </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="present" onclick="openPresent()">
-            <div class="bow">🎀</div>
-        </div>
-
-        <div class="caption">
-            <p>Click to open your surprise 💌</p>
-        </div>
+  <div class="container">
+    <div class="present" onclick="openPresent()">
+      <div class="bow">🎀</div>
     </div>
+    <div class="caption">Click to open your surprise 💌</div>
+  </div>
 
-    <script>
-        function openPresent() {
-            const box = document.querySelector('.present');
-            box.classList.add('shake');
-            setTimeout(() => {
-                window.location.href = 'surprise.html';
-            }, 800);
-        }
-    </script>
+  <script>
+    function openPresent() {
+      const box = document.querySelector('.present');
+      box.classList.add('shake');
+      setTimeout(() => {
+        window.location.href = 'surprise.html';
+      }, 800);
+    }
+  </script>
 </body>
 
 </html>
