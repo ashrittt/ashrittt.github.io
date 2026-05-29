@@ -4,7 +4,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, red, blue);
+  background: linear-gradient(135deg, #F8C3C8, #C3F8D8, #C3E3F8);
   font-family: Arial, sans-serif;
   overflow: hidden;
 }
