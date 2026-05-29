@@ -1,111 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Will You Be My Valentine?</title>
-  <style>
-    body {
-      font-family: 'Comic Sans MS', cursive;
-      background: #ffe6f0;
-      text-align: center;
-      padding: 40px 20px;
-      margin: 0;
-    }
-
-    h1 {
-      font-size: 2em;
-      color: #d6336c;
-      margin-bottom: 20px;
-    }
-
-    .question {
-      font-size: 1.3em;
-      margin-bottom: 30px;
-    }
-
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    button {
-      font-size: 1.1em;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 10px;
-      background-color: #fff;
-      color: #d6336c;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-      z-index: 1;
-    }
-
-    button:hover {
-      transform: scale(1.1);
-    }
-
-    #yesBtn.grow {
-      transform: scale(5);
-      transition: transform 0.5s ease;
-      z-index: 10;
-      position: relative;
-    }
-
-    #response, #twist {
-      margin-top: 40px;
-      font-size: 1.2em;
-      color: #6f42c1;
-    }
-
-    #twist {
-      display: none;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 1.6em;
-      }
-
-      .question {
-        font-size: 1.1em;
-      }
-
-      button {
-        font-size: 1em;
-        padding: 10px 20px;
-      }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>Happy 3 Months</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>💌 Ask Me a Valentine</h1>
-  <div class="question">Would you be my Valentine?</div>
-  <div class="buttons">
-    <button id="yesBtn" onclick="respondYes()">Yes 💖</button>
-    <button onclick="respondNo()">No 😢</button>
+  <div class="message" id="popup">Happy 3 Months</div>
+  <div class="envelopes" id="envelopes">
+    <div class="envelope">💌</div>
+    <div class="envelope">💌</div>
+    <div class="envelope">💌</div>
   </div>
-  <div id="response"></div>
-  <div id="twist">Just kidding... I was asking for my friend 😏</div>
-
-  <script>
-    function respondYes() {
-      const btn = document.getElementById("yesBtn");
-      btn.classList.add("grow");
-      document.getElementById("response").innerHTML = "Aww that's sweet!";
-      setTimeout(() => {
-        document.getElementById("twist").style.display = "block";
-      }, 1500);
-    }
-
-    function respondNo() {
-      document.getElementById("response").innerHTML = "Ouch... that hurts!";
-      setTimeout(() => {
-        document.getElementById("twist").style.display = "block";
-      }, 1500);
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
