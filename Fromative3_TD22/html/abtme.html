@@ -37,12 +37,6 @@
                     style="width: 120px; border-radius: 1px;">
             </section>
 
-            <div id="password-lock" class="password-box">
-                <h2>Enter Password to View About Me</h2>
-                <input type="password" id="password-input" placeholder="Enter password" />
-                <button onclick="unlockSection()">Unlock</button>
-                <p id="error-message" style="color: red;"></p>
-            </div>
 
             <section class="mid" id="about-section" style="display: none;">
                 <div class="banner">
@@ -98,18 +92,5 @@
         </footer>
     </div>
 </body>
-<script>
-    function unlockSection() {
-        const password = document.getElementById("password-input").value;
-        const correctPassword = "ashritttluna";
-
-        if (password === correctPassword) {
-            document.getElementById("about-section").style.display = "block";
-            document.getElementById("password-lock").style.display = "none";
-        } else {
-            document.getElementById("error-message").textContent = "Incorrect password. Try again.";
-        }
-    }
-</script>
-
+    
 </html>
